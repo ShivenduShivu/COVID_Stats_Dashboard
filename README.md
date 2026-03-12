@@ -1,16 +1,73 @@
-# React + Vite
+# 🦠 COVID Stats Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A mini React dashboard that displays real-time COVID-19 statistics by country.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [covid-stats-dashboard.vercel.app](https://covid-stats-dashboard.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📸 Preview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+> Select any country from the dropdown to see live stats in Card or Table view.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- 🌍 Dropdown to select any country (190+ countries)
+- 📊 Toggle between **Card View** and **Table View**
+- 🎨 Color-coded severity (cases, recovered, deaths)
+- 🌐 Global summary bar at the top
+- 🏳️ Country flag display
+- ⏳ Loading and empty state handling
+
+---
+
+## 🛠️ Tech Stack
+
+- **React** (Vite)
+- **useState** + **useEffect** for state & data fetching
+- **Plain CSS** — no UI libraries
+- **disease.sh API** — free open COVID-19 data
+
+---
+
+## 📁 Project Structure
+```
+src/
+├── components/
+│   ├── CountryDropdown.jsx
+│   ├── StatsCard.jsx
+│   ├── StatsTable.jsx
+│   └── ViewToggle.jsx
+├── App.jsx
+├── App.css
+└── main.jsx
+```
+
+---
+
+## 🚀 Run Locally
+```bash
+git clone https://github.com/ShivenduShivu/COVID_Stats_Dashboard.git
+cd covid-stats-dashboard
+npm install
+npm run dev
+```
+
+---
+
+## 📡 API Used
+
+[disease.sh](https://disease.sh/) — Open Disease Data API
+```
+GET https://disease.sh/v3/covid-19/all
+GET https://disease.sh/v3/covid-19/countries
+GET https://disease.sh/v3/covid-19/countries/{country}
+```
+
+---
+
+## 👨‍💻 Author
+
+Built by **Shivendu** as a React mini class project.

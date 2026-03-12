@@ -1,3 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+}
+
+.app {
+  max-width: 860px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+  color: #1a1a2e;
+  text-align: center;
+}
+
+/* ── Global Bar ── */
+.global-bar {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  background: #1a1a2e;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+}
+
+.global-bar strong {
+  color: #f0c040;
+}
+
+.global-bar span:first-child strong {
+  color: white;
+  font-size: 1rem;
+}
+
+/* ── Dropdown ── */
+.dropdown-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.dropdown-wrapper label {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+}
+
+.dropdown-wrapper select {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 300px;
+  cursor: pointer;
+  background: white;
+}
+
+/* ── Loading / Empty ── */
+.loading, .empty {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* ── Country Title ── */
+.country-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.4rem;
+  color: #1a1a2e;
+}
+
+.flag {
+  width: 32px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  flex-shrink: 0;
+}
+
+/* ── Toggle Buttons ── */
 .toggle-wrapper {
   display: flex;
   gap: 0.75rem;
@@ -19,6 +119,32 @@
   color: white;
 }
 
+/* ── Card View ── */
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  padding: 1.25rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.card-label {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.6rem;
+}
+
+.card-value {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+/* ── Table View ── */
 .stats-table {
   width: 100%;
   border-collapse: collapse;
@@ -44,13 +170,4 @@
 
 .stats-table tr:last-child td {
   border-bottom: none;
-}
-
-.flag {
-  width: 32px;
-  height: 20px;
-  object-fit: cover;
-  border-radius: 3px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-  flex-shrink: 0;
 }

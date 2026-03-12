@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import CountryDropdown from './components/CountryDropdown'
+import StatsCard from './components/StatsCard'
 import './App.css'
 
 function App() {
@@ -47,13 +48,19 @@ function App() {
         onSelect={setSelectedCountry}
       />
 
-      {/* Debug output — we'll replace this next chunk */}
-      {loading && <p>Loading...</p>}
-      {stats && (
+      {loading && <p className="loading">⏳ Loading...</p>}
+
+      {!loading && !stats && (
+        <p className="empty">👆 Select a country to see stats</p>
+      )}
+
+      {!loading && stats && (
         <div>
-          <p>Cases: {stats.cases.toLocaleString()}</p>
-          <p>Recovered: {stats.recovered.toLocaleString()}</p>
-          <p>Deaths: {stats.deaths.toLocaleString()}</p>
+          <h2 className="country-title">
+            <img src={stats.countryInfo.flag} alt="" className="flag" />
+            {stats.country}
+          </h2>
+          <StatsCard stats={stats} />
         </div>
       )}
     </div>

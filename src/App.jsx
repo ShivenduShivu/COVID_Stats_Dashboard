@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import CountryDropdown from './components/CountryDropdown'
 import StatsCard from './components/StatsCard'
+import StatsTable from './components/StatsTable'
+import ViewToggle from './components/ViewToggle'
 import './App.css'
 
 function App() {
@@ -60,7 +62,11 @@ function App() {
             <img src={stats.countryInfo.flag} alt="" className="flag" />
             {stats.country}
           </h2>
-          <StatsCard stats={stats} />
+
+          <ViewToggle view={view} onToggle={setView} />
+
+          {view === 'card'  && <StatsCard  stats={stats} />}
+          {view === 'table' && <StatsTable stats={stats} />}
         </div>
       )}
     </div>

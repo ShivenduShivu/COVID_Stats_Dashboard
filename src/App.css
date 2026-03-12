@@ -1,82 +1,56 @@
-.app {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #1a1a2e;
-}
-
-.dropdown-wrapper {
+.toggle-wrapper {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.dropdown-wrapper label {
-  font-weight: bold;
-  font-size: 1rem;
-  color: #333;
-}
-
-.dropdown-wrapper select {
-  padding: 0.6rem 1rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  width: 300px;
-  cursor: pointer;
-  background: white;
-}
-
-.loading, .empty {
-  font-size: 1.1rem;
-  color: #666;
-  margin-top: 1rem;
-}
-
-.country-title {
-  display: flex;
-  align-items: center;
   gap: 0.75rem;
   margin-bottom: 1.25rem;
-  font-size: 1.5rem;
-  color: #1a1a2e;
 }
 
-.flag {
-  width: 40px;
-  height: 26px;
-  object-fit: cover;
-  border-radius: 4px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+.toggle-btn {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.95rem;
+  border: 2px solid #1a1a2e;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
-.cards-wrapper {
-  display: flex;
-  gap: 1.25rem;
-  flex-wrap: wrap;
+.toggle-btn.active {
+  background: #1a1a2e;
+  color: white;
 }
 
-.card {
-  flex: 1;
-  min-width: 200px;
-  padding: 1.25rem 1.5rem;
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
   border-radius: 10px;
+  overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-.card-label {
+.stats-table th {
+  background: #1a1a2e;
+  color: white;
+  padding: 0.85rem 1.25rem;
+  text-align: left;
   font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 0.5rem;
 }
 
-.card-value {
-  font-size: 1.8rem;
-  font-weight: bold;
+.stats-table td {
+  padding: 0.85rem 1.25rem;
+  font-size: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.stats-table tr:last-child td {
+  border-bottom: none;
+}
+
+.flag {
+  width: 32px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  flex-shrink: 0;
 }
